@@ -20,7 +20,7 @@ const App = () => {
   // Artık sahteVeri'ye ihtiyacınız olmayacak.
   // Arama çubuğunun çalışması için , arama kriterini tutacak başka bir state'e ihtiyacımız olacak.
   const [gonderiler, setGonderi] = useState(sahteVeri);
-  const [arama, setArama] = useState("");
+  const [aramaKriteri, setAramaKriteri] = useState("");
 
   const gonderiyiBegen = (gonderiID) => {
     /*
@@ -43,11 +43,15 @@ const App = () => {
         }
       })
     ); */
+    const newData = [...gonderiler];
+
+    newData.map((data) => {});
   };
 
   return (
     <div className="App">
       <AramaCubugu />
+
       <Gonderiler />
       {/* Her bileşenin hangi proplara ihtiyaç duyduğunu kontrol edin, eğer ihtiyaç varsa ekleyin! */}
     </div>
